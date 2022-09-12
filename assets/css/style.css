@@ -1,0 +1,581 @@
+@import url('anek-telugu.css');
+
+
+/* Reset */
+
+:root {
+    --grey-color: #828282;
+    --light-grey: #bebebe;
+    --lighter-grey: #d9d9d9;
+    --white: #ffffff;
+    --text-black: #141313;
+    --header-gradient: linear-gradient(rgb(90, 109, 130), rgb(122, 154, 188));
+    --navy-blue: rgb(37, 82, 140);
+    --green: rgb(35, 173, 119);
+    --fs-1: 4.2rem;
+    --fs-2: 3.8rem;
+    --fs-3: 3.2rem;
+    --fs-4: 2.5rem;
+    --fs-5: 2.4rem;
+    --fs-6: 2rem;
+
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+}
+
+
+/* CSS RESET */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+img,
+span,
+input,
+button {
+    display: block;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+html {
+    font-family: 'Anek Telugu', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-black);
+    font-size: 1.6rem;
+}
+
+
+/* General CSS */
+.w-100 { width: 100%; }
+
+.w-85 { width: 85%; }
+
+.w-70 { width: 70%; }
+
+.w-50{ width: 50%;}
+
+.w-45{ width: 45%;}
+
+.w-40 { width: 40%;}
+
+.w-30 { width: 30%; }
+
+.w-25 { width: 25%; };
+
+.w-20{ width: 20%; }
+
+.w-15 { width: 15%; }
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.d-flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-group{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+.g-2{
+    gap: 1rem;
+}
+.circle{
+    width: 25px;
+    height: 25px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.container{
+    width: 90%;
+    margin-inline: auto;
+}
+main{
+    display: flex;
+    min-height: calc(100vh - 50px);
+}
+
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-image: var(--header-gradient);
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--white);
+}
+
+.logo > h1{
+    color: var(--white);
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    font-size: var(--fs-1);
+    font-weight: var(--fw-700);
+}
+
+.logo > i{
+    font-size: var(--fs-4);
+}
+
+header > .icon-group{
+    display: flex;
+    margin-right: 2rem;
+    font-size: var(--fs-6);
+    color: var(--white);
+    gap: 3rem;
+}
+
+/*Sidebar */
+
+main > .sidebar{
+    background-color: var(--navy-blue);
+}
+
+
+nav > .user{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    color: var(--white);
+    background-color: var(--green);
+}
+
+
+
+nav > .link-group > .link{
+    padding: 1.5rem 2rem;
+}
+
+nav>.link-group>.btn-logout {
+    background-color: rgb(197, 12, 21);
+    margin-inline: 0;
+    padding: 1rem 2rem;
+    margin-top: 5rem;
+}
+nav > .link-group > .link > a {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+    align-items: center;
+}
+
+nav > .link-group > .link.active{
+    background-color: rgb(1, 27, 58);   
+}
+
+/* 
+Main-content
+ */
+.content-header{
+    height: 50px;
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.content-header > .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+    gap: 1rem;
+    font-size: 1.4rem;
+}
+
+.content-header > .search-box{
+    display: flex;
+    align-items: center;
+    margin-right:2rem ;
+    background-color: var(--white);
+    height: 40px;
+    margin-block: 5px;
+    border-radius: .3rem;
+    padding-inline: 2rem;
+}
+
+.content-header > .search-box  > input[type=text]{
+    height: 40px;
+    background-color: var(--white);
+    outline: none;
+    border: none;
+   
+}
+
+.content-header > .search-box > input[type=text]::placeholder{
+   text-align: center;
+   font-size: 1.4rem;
+}
+
+/* dashboard cards */
+.dashboard-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.dashboard-cards > .card{
+    display: flex;
+    background-color: var(--grey-color);
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.dashboard-cards > .card .circle{
+    margin-bottom: 1rem;
+}
+
+/* Info Cards*/
+.info-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 2rem;
+    gap: 3rem;
+}
+
+.info-cards > .card{
+    background-color: var(--light-grey);
+    padding: 1rem;
+}
+
+.info-cards > .card > .card-header{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+
+.info-cards > .card  .data-group > li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--text-black);
+}
+
+
+.info-cards > .card .data-group > li > span{
+    background-color: var(--white);
+    padding: .5rem;
+    font-size: 1.2rem;
+}
+
+.info-cards > .card > .footer{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.info-cards > .card .progress-info{
+    margin-top: 2rem;
+}
+
+.info-cards>.card .progress-info li {
+    margin-bottom: .5rem;
+}
+
+.info-cards > .card li > div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+progress {
+    border-radius: 7px;
+    width: 100%;
+    height: 10px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+progress::-webkit-progress-bar {
+    background-color: var(--lighter-grey);
+    
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--grey-color);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--lighter-grey);
+}
+
+/* Table Card*/
+.table-card{
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--light-grey);
+}
+
+.table-card > .card > .card-title{
+    text-transform: uppercase;
+    color: var(--text-black);
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--text-black);
+}
+
+.table-card > .card  table{
+    width: 90%;
+    margin-top: 2rem;
+    margin-inline: auto;
+    text-align: center ;
+}
+
+.table-card > .card  table > thead{
+    color: var(--text-black);
+   
+}
+
+.table-card>.card table td{
+    padding: 1rem;
+}
+
+
+.table-card > .card table > tbody > tr:nth-child(odd)  {
+    background-color: var(--lighter-grey);
+}
+
+/* Payment Page */
+.action-bar{
+    display: flex;
+    background-color: var(--lighter-grey);
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin-top: 1rem;
+}
+
+.action-bar > .action {
+    background-color: var(--light-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: .2rem;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+
+.action-bar > .circles {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+.action-bar > .circles > .circle {
+    background-color: var(--light-grey);
+}
+
+/*
+* Report Page 
+*/
+.report-info{
+    display: flex;
+    gap: 3rem;
+}
+
+:is(.personal-info, .general-info, .vital-info){
+    width: 90%;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+.card:is(.personal-info, .general-info, .vital-info, .patient-list) > .card-heading > p {
+    background-color: var(--text-black);
+    width: fit-content;
+    color: var(--white);
+    padding: .5rem;
+    font-size: 1.4rem;
+}
+
+.card:is(.personal-info, .general-info, .vital-info)>.card-body > .item {
+    display: flex;
+    border-bottom: 1px solid var(--text-black);
+    padding: 1rem 0;
+}
+
+.card:is(.personal-info, .general-info, .vital-info)>.card-body > .flex-group > .item {
+    display: flex;
+    border-bottom: 1px solid var(--text-black);
+    padding: 1rem 0;
+}
+
+.card:is(.personal-info, .general-info, .vital-info)>.card-body  p {
+    width: 50%;
+}
+
+.card:is(.personal-info, .general-info, .vital-info)>.card-body  p:first-child{
+    font-weight: bold;
+}
+
+.card:is(.personal-info, .general-info, .vital-info)>.card-body > .flex-group > .item > p.w-60{
+    width: 60%;
+}
+
+.patient-list {
+    background-color: var(--light-grey);
+    width: 100%;
+    padding: 2rem;
+}
+.patient-list > .card-body > table {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.patient-list > .card-body > table > tbody > tr > td {
+    padding: 1rem;
+}
+
+.patient-list >.card-body > table > tbody > tr:nth-child(odd) {
+   background-color: var(--white);
+}
+
+.patient-list > .card-footer > ul > li {
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--white);
+    margin-top: 1rem;
+}
+
+/*
+* Payment Page
+*/
+
+.invoice-details{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--text-black);
+    padding: 2rem;
+    border-radius: .8rem;
+}
+
+.data-list > li  {
+    display: flex;
+    gap: 3rem;
+    margin-right: 2rem;
+    
+}
+
+.data-list > li > span {
+    text-align: left;
+    width: 70%;
+    font-weight: bold;
+}
+
+.data-list > li > span:nth-child(even) {
+    text-align: right;
+    width: 30%;
+    font-weight: 400;
+}
+
+.table-transparent {
+    background-color: transparent;
+}
+
+.table-transparent > .card-body > table {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid var(--text-black);
+}
+
+.table-transparent > .card-body > table > thead > tr > th{
+    padding-bottom: 2rem;
+    padding-top: 1rem;  
+}
+
+.table-transparent > .card-body > table > tbody > tr > td{
+    padding: 2rem;
+}
+
+/*
+* Appointment Page 
+*/
+
+.table-bordered {
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.table-bordered  table  {
+    border-collapse: collapse;
+}
+
+.table-bordered :is(table, td, th ){
+    border: 1px solid black;   
+}
+
+.table-bordered :is(td, th) {
+    padding: 2rem;
+}
+
+.table-bordered .card-footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.table-bordered .card-footer > span{
+    background-color: var(--light-grey);
+    padding: 1rem;
+}
